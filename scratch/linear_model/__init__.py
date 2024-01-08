@@ -3,7 +3,7 @@ from ._stochastic_gradient import SGDRegressor, SGDClassifier
 
 
 __all__ = [
-    LinearRegression,
-    SGDRegressor,
-    SGDClassifier,
+    "LinearRegression",
+    "SGDRegressor",
+    "SGDClassifier",
 ]
