@@ -1,4 +1,4 @@
-from generative_model import HMM, SmoothHMM
+from scratch.generative_model import HMM, SmoothHMM
 
 
 observations = [

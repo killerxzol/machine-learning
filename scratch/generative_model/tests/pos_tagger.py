@@ -1,5 +1,5 @@
 from nltk.corpus import treebank
-from generative_model import HMM, SmoothHMM
+from scratch.generative_model import HMM, SmoothHMM
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, accuracy_score
 
@@ -20,7 +20,9 @@ def main():
     X, y = zip(*(zip(*sequence) for sequence in data))
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    model = SmoothHMM(order=2, n_jobs=1)
+    # model = SmoothHMM(order=2, n_jobs=1)
+    model = HMM(order=2, n_jobs=1)
+
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)

@@ -1,5 +1,5 @@
 import numpy as np
-from linear_model import SGDClassifier
+from scratch.linear_model import SGDClassifier
 from sklearn.datasets import load_breast_cancer
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
